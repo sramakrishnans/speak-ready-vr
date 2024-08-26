@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speak Ready VR Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Hide the warning popup by default */
+        #warningPopup {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation Section -->
+    <nav class="bg-blue-600 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white font-bold text-lg">Speak Ready VR</a>
+            <ul class="flex space-x-6">
+                <li><a href="#" class="text-white hover:text-gray-200">Home</a></li>
+                <li><a href="#" class="text-white hover:text-gray-200">About</a></li>
+                <li><a href="#" class="text-white hover:text-gray-200">Features</a></li>
+                <li><a href="#" class="text-white hover:text-gray-200">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="container mx-auto p-8 flex justify-center items-center min-h-screen">
+        <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
+            <h1 class="text-2xl font-bold text-center mb-6">Registration Form</h1>
+            <form action="#" method="post">
+                <!-- Personal Information -->
+                <h3 class="text-lg font-semibold mb-2">Personal Information</h3>
+                
+                <div class="mb-4">
+                    <label for="name" class="block text-black font-semibold mb-1">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-black font-semibold mb-1">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="phone" class="block text-black font-semibold mb-1">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="college" class="block text-black font-semibold mb-1">College/University Name:</label>
+                    <input type="text" id="college" name="college" placeholder="Enter the name of your college or university" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="course" class="block text-black font-semibold mb-1">Course/Major:</label>
+                    <input type="text" id="course" name="course" placeholder="Enter your course or major" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="year" class="block text-black font-semibold mb-1">Year of Study:</label>
+                    <select id="year" name="year" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600" required>
+                        <option value="" disabled selected>Select your year</option>
+                        <option value="first">First Year</option>
+                        <option value="second">Second Year</option>
+                        <option value="third">Third Year</option>
+                        <option value="fourth">Fourth Year</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Preferred Communication Mode -->
+                <h3 class="text-lg font-semibold mb-2">Preferred Communication Mode</h3>
+
+                <div class="mb-4">
+                    <label for="language" class="block text-black font-semibold mb-1">Preferred Language:</label>
+                    <input type="text" id="language" name="language" placeholder="Enter your preferred language (e.g., English, Hindi)" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="challenges" class="block text-black font-semibold mb-1">Communication Challenges:</label>
+                    <textarea id="challenges" name="challenges" placeholder="Describe your communication challenges (optional)" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600" rows="4"></textarea>
+                </div>
+
+                <!-- VR Equipment -->
+                <h3 class="text-lg font-semibold mb-2">VR Equipment</h3>
+                <div class="mb-4">
+                    <label class="block text-black font-semibold mb-1">Do you have access to VR equipment?</label>
+                    <div class="flex items-center">
+                        <input type="radio" id="vr_yes" name="vr_equipment" value="yes" class="mr-2" required>
+                        <label for="vr_yes" class="text-black">Yes</label>
+                    </div>
+                    <div class="flex items-center mt-2">
+                        <input type="radio" id="vr_no" name="vr_equipment" value="no" class="mr-2" required>
+                        <label for="vr_no" class="text-black">No</label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-black font-semibold mb-1">If no, would you like to borrow VR equipment from the project team?</label>
+                    <div class="flex items-center">
+                        <input type="radio" id="borrow_yes" name="borrow_vr" value="yes" class="mr-2" required>
+                        <label for="borrow_yes" class="text-black">Yes</label>
+                    </div>
+                    <div class="flex items-center mt-2">
+                        <input type="radio" id="borrow_no" name="borrow_vr" value="no" class="mr-2" required>
+                        <label for="borrow_no" class="text-black">No</label>
+                    </div>
+                </div>
+
+                <!-- Session Preferences -->
+                <h3 class="text-lg font-semibold mb-2">Session Preferences</h3>
+                
+                <div class="mb-4">
+                    <label class="block text-black font-semibold mb-1">Preferred Session Timing:</label>
+                    <select id="session_timing" name="session_timing" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600" required>
+                        <option value="" disabled selected>Select your preferred timing</option>
+                        <option value="morning">Morning (8 AM - 12 PM)</option>
+                        <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                        <option value="evening">Evening (4 PM - 8 PM)</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-black font-semibold mb-1">Availability:</label>
+                    <div class="flex flex-wrap">
+                        <label class="inline-flex items-center mr-4">
+                            <input type="checkbox" name="availability" value="monday" class="form-checkbox">
+                            <span class="ml-2">Monday</span>
+                        </label>
+                        <label class="inline-flex items-center mr-4">
+                            <input type="checkbox" name="availability" value="tuesday" class="form-checkbox">
+                            <span class="ml-2">Tuesday</span>
+                        </label>
+                        <label class="inline-flex items-center mr-4">
+                            <input type="checkbox" name="availability" value="wednesday" class="form-checkbox">
+                            <span class="ml-2">Wednesday</span>
+                        </label>
+                        <label class="inline-flex items-center mr-4">
+                            <input type="checkbox" name="availability" value="thursday" class="form-checkbox">
+                            <span class="ml-2">Thursday</span>
+                        </label>
+                        <label class="inline-flex items-center mr-4">
+                            <input type="checkbox" name="availability" value="friday" class="form-checkbox">
+                            <span class="ml-2">Friday</span>
+                        </label>
+                        <label class="inline-flex items-center mr-4">
+                            <input type="checkbox" name="availability" value="saturday" class="form-checkbox">
+                            <span class="ml-2">Saturday</span>
+                        </label>
+                        <label class="inline-flex items-center mr-4">
+                            <input type="checkbox" name="availability" value="sunday" class="form-checkbox">
+                            <span class="ml-2">Sunday</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Additional Information -->
+                <h3 class="text-lg font-semibold mb-2">Additional Information</h3>
+
+                <div class="mb-4">
+                    <label for="source" class="block text-black font-semibold mb-1">How did you hear about Speak Ready VR?</label>
+                    <select id="source" name="source" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="college_announcement">College Announcement</option>
+                        <option value="social_media">Social Media</option>
+                        <option value="friends_peers">Friends/Peers</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="comments" class="block text-black font-semibold mb-1">Any additional comments or questions?</label>
+                    <textarea id="comments" name="comments" placeholder="Provide any additional information or questions you may have" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600" rows="4"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex justify-center">
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Warning Popup Box -->
+    <div id="warningPopup" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center">
+        <div class="bg-white w-full max-w-lg p-6 rounded-lg shadow-lg">
+            <div class="flex justify-between items-center">
+                <h2 class="text-xl font-bold text-gray-800">Warning</h2>
+                <button onclick="closeWarningPopup()" class="text-gray-500 hover:text-gray-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <p class="mt-4 text-gray-700"><strong>The website is created by  S.Ramakrishnan.</strong>  Sorry, mam, I am unable to attend today's class due to some personal issues.</p>
+            <div class="mt-6 text-right">
+                <button onclick="closeWarningPopup()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show the warning popup immediately when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('warningPopup').style.display = 'flex';
+        });
+
+        // Function to close the warning popup
+        function closeWarningPopup() {
+            document.getElementById('warningPopup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
